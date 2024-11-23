@@ -1,0 +1,76 @@
+ng-tooltip {
+  --background-color: var(--tooltip-background, #26292c);
+  --color: var(--tooltip-color, #f4f5f8);
+  --max-width: var(--tooltip-max-width, 200px);
+  --height: var(--tooltip-height, auto);
+  --border-radius: var(--tooltip-border-radius, 4px);
+  --padding: var(--tooltip-padding, 6px 8px);
+}
+
+.init-tooltip-container,
+.tooltip-container {
+  position: absolute;
+  background-color: var(--background-color);
+  color: var(--color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  z-index: 1000;
+  white-space: nowrap;
+  max-width: var(--max-width);
+  height: var(--height);
+  visibility: hidden;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.init-tooltip-container,
+.tooltip-container {
+  &.top .tooltip-arrow {
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: var(--background-color) transparent transparent transparent;
+  }
+}
+
+.init-tooltip-container,
+.tooltip-container {
+  &.bottom .tooltip-arrow {
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--background-color) transparent;
+  }
+}
+
+.init-tooltip-container,
+.tooltip-container {
+  &.left .tooltip-arrow {
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--background-color);
+  }
+}
+
+.init-tooltip-container,
+.tooltip-container {
+  &.right .tooltip-arrow {
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    border-color: transparent var(--background-color) transparent transparent;
+  }
+}
