@@ -96,7 +96,7 @@ export class YourComponent {
 
 ##### Add it to angular.json:
 
-```json
+```t
 /* angular.json */
 
 "styles": [
