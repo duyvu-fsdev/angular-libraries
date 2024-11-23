@@ -46,7 +46,7 @@ npm install @duyvu-fsdev/ng-tooltip --legacy-peer-deps
 
 ##### Add TooltipModule to your module:
 
-```python
+```typescript
 /* *.module.ts */
 
 import { TooltipModule } from '@duyvu-fsdev/ng-tooltip';
@@ -60,29 +60,31 @@ export class YourModule {}
 
 **2. Add the tooltip to your template**
 
-##### Use the tooltip directive and configure properties such as tooltipText and tooltipClass
+##### Template Example:
 
-```python
-*.html
-<app-tooltip [option]="tooltipOption">
- <host-element><!-- content --></host-element>
-</app-tooltip>
-```
+```html
+/* *.html */
 
-```
-tooltipOption = {
- position: 'bottom';
- text: 'Hello';
- class: 'custom-css'
-}
+<ng-tooltip [option]="tooltipOption">
+  <host-element><!-- content --></host-element>
+</ng-tooltip>
 ```
 
-```
-export type Position = 'top' | 'bottom' | 'left' | 'right' | undefined;
-export interface Option {
- position?: Position;
- text: string;
- class?: string;
+##### TypeScript Example:
+
+```typescript
+// *.ts
+
+import { Option } from '@duyvu-fsdev/ng-tooltip';
+...
+
+export class YourComponent {
+ ...
+ tooltipOption: Option = {
+  position: 'bottom',
+  text: 'Hello, this is a tooltip!',
+  class: 'custom-tooltip'
+ };
 }
 ```
 
@@ -92,7 +94,7 @@ export interface Option {
 
 **1. Import default styles** **[_important_]**
 
-```python
+```json
 /* angular.json */
 
 "styles": [
@@ -103,26 +105,26 @@ export interface Option {
 
 or
 
-```python
+```scss
 /* global.scss */
 
-@import 'node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss';
+@import "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss";
 ```
 
 **2. Customize using CSS variables**
 
 ##### Modify variables directly in global.scss to change the tooltip's appearance globally
 
-```python
+```scss
 /* global.scss */
 
 ng-tooltip {
- --tooltip-background: #fff;
- --tooltip-color: #000;
- --tooltip-border-radius: 4px;
- --tooltip-padding: 8px;
- --tooltip-width: auto;
- --tooltip-height: auto;
+  --tooltip-background: #fff;
+  --tooltip-color: #000;
+  --tooltip-border-radius: 4px;
+  --tooltip-padding: 8px;
+  --tooltip-width: auto;
+  --tooltip-height: auto;
 }
 ```
 
@@ -132,14 +134,14 @@ ng-tooltip {
 class: 'custom-css'
 ```
 
-```python
+```scss
 /* global.scss */
 
 .custom-css {
- background: #f00;
- color: #fff;
- padding: 10px;
- border-radius: 8px;
+  background: #f00;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
 }
 ```
 
