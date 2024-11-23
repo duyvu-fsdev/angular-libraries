@@ -101,7 +101,7 @@ export class YourComponent {
 
 "styles": [
  ...
- "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss"
+ "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.scss"
 ]
 ```
 
@@ -110,7 +110,7 @@ export class YourComponent {
 ```scss
 /* global.scss */
 
-@import "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss";
+@import "@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.scss";
 ```
 
 **2. Customize using CSS variables**
