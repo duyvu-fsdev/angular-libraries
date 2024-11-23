@@ -2,37 +2,29 @@
 
 ### Overview
 
-#### ng-tooltip is a versatile and customizable tooltip library for Angular and Ionic/Angular applications. Its key feature is its ability to reposition itself dynamically when overflowing the screen.
+#### ng-tooltip is a versatile and customizable tooltip library designed for Angular and Ionic/Angular applications.
 
 ##
 
 ### Features
 
-**- Dynamic positioning: Automatically adjusts when overflowing screen boundaries.**
-
-**- Customizable styles: Modify styles using CSS variables or custom classes.**
-
-**- Seamless integration: Works well with Angular and Ionic applications.**
+- **Dynamic positioning**: Automatically adjusts when overflowing screen boundaries.
+- **Customizable styles**: Modify tooltip styles using CSS variables or custom classes.
+- **Seamless integration**: Easily integrates with Angular and Ionic frameworks.
 
 ##
 
 ### Installation
 
-**Run the following command to install the library**
+**To install the library, run the following command:**
 
 ```bash
 npm install @duyvu-fsdev/ng-tooltip
 ```
 
-#### _If you encounter a dependency conflict with the required version of @angular/common, you can fix it by:_
+#### _If you encounter a dependency conflict with the required version of @angular/common, you can resolve it by:_
 
-##### _Upgrading @angular/common:_
-
-```bash
-ng update @angular/core @angular/cli
-```
-
-##### _Or using the --legacy-peer-deps flag if upgrading Angular is not possible:_
+##### _using the --legacy-peer-deps flag:_
 
 ```bash
 npm install @duyvu-fsdev/ng-tooltip --legacy-peer-deps
@@ -88,22 +80,32 @@ export class YourComponent {
 }
 ```
 
+##### Option Interface
+
+| Property   | Type                                                 |  Default   | Description                                  | Example                  |
+| ---------- | ---------------------------------------------------- | :--------: | -------------------------------------------- | ------------------------ |
+| `position` | `'top' \| 'bottom' \| 'left' \| 'right'\| undefined` | `'bottom'` | Position of the tooltip relative to the host | `'bottom'`               |
+| `text`     | `string`                                             |    `''`    | Tooltip text content                         | `'Tooltip text content'` |
+| `class`    | `string`                                             |    `''`    | CSS class for custom styling                 | `'custom-tooltip'`       |
+
 ##
 
 ### CSS Configuration
 
 **1. Import default styles** **[_important_]**
 
+##### Add it to angular.json:
+
 ```json
 /* angular.json */
 
 "styles": [
- ...,
+ ...
  "node_modules/@duyvu-fsdev/ng-tooltip/styles/ng-tooltip.component.scss"
 ]
 ```
 
-or
+##### or import it into your global SCSS file
 
 ```scss
 /* global.scss */
@@ -128,16 +130,19 @@ ng-tooltip {
 }
 ```
 
-##### Pass a class name through option.class and define its styles in your global CSS
+##### You can also apply custom styles using a specific class
 
-```bash
-class: 'custom-css'
+```typescript
+tooltipOption: Option = {
+ ...
+ class: 'custom-tooltip'
+};
 ```
 
 ```scss
 /* global.scss */
 
-.custom-css {
+.custom-tooltip {
   background: #f00;
   color: #fff;
   padding: 10px;
@@ -149,7 +154,7 @@ class: 'custom-css'
 
 ### Demo
 
-(updating...)
+##### (updating...) Demo and usage examples will be updated soon.
 
 ##
 
