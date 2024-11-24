@@ -95,8 +95,6 @@ export class TooltipDirective implements AfterViewInit {
         this.tooltipComponentRef.location.nativeElement as HTMLElement
       ).querySelector(".tooltip-container") as HTMLElement;
 
-      console.log(tooltipEl, this.initTooltipEl);
-
       if (this.option.class) {
         tooltipEl.classList.add(this.option.class);
         this.initTooltipEl.classList.add(this.option.class);
@@ -122,8 +120,6 @@ export class TooltipDirective implements AfterViewInit {
         const isOverRight = right > windowWidth;
         const isOverTop = top < 0;
         const isOverBottom = bottom > windowHeight;
-
-        console.log(this.initPosition, isOverLeft, isOverRight, isOverBottom, isOverTop);
 
         if (!isOverLeft && !isOverRight && !isOverBottom && !isOverTop)
           this.position = this.initPosition;

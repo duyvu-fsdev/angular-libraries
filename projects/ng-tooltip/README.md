@@ -154,7 +154,7 @@ tooltipOption: Option = {
 
 ### Demo
 
-[Demo](https://stackblitz.com/~/github.com/duyvu-fsdev/ng-tooltip-demo)
+[![Demo](https://miro.medium.com/v2/resize:fit:472/1*QkCbNJrdvF1DxrOGU2xz7g.png)](https://stackblitz.com/~/github.com/duyvu-fsdev/ng-tooltip-demo)
 
 ##
 
