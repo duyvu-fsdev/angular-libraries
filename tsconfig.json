@@ -14,6 +14,9 @@
     "paths": {
       "ng-tooltip": [
         "./dist/ng-tooltip"
+      ],
+      "ng-tooltip-directive": [
+        "./dist/ng-tooltip-directive"
       ]
     },
     "esModuleInterop": true,

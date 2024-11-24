@@ -1,4 +1,4 @@
-ng-tooltip {
+.app-tooltip {
   --background-color: var(--tooltip-background, #26292c);
   --color: var(--tooltip-color, #f4f5f8);
   --max-width: var(--tooltip-max-width, fit-content);
@@ -12,7 +12,7 @@ ng-tooltip {
 
 .init-tooltip-container,
 .tooltip-container {
-  position: absolute;
+  position: fixed;
   background-color: var(--background-color);
   color: var(--color);
   padding: var(--padding);

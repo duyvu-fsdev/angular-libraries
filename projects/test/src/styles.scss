@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../../ng-tooltip/styles/ng-tooltip.scss";
+@import "../../ng-tooltip-directive/styles/ng-tooltip.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.app-tooltip.custom-variables {
+  --tooltip-background: orange;
+  --tooltip-color: red;
+}
+
+.custom-css {
+  background-color: yellow;
+  color: blue;
+  padding: 10px 20px;
+}
+
+.app-tooltip.other-component {
+  --tooltip-background: rgb(255, 255, 255);
+  --tooltip-color: rgb(0, 0, 0);
+}

@@ -1,11 +1,11 @@
 {
-  "name": "@duyvu-fsdev/ng-tooltip",
+  "name": "@duyvu-fsdev/ng-tooltip-directive",
   "version": "1.0.0",
   "author": {
     "name": "duyvu-fsdev",
     "email": "duyvu.fullstackdev@gmail.com"
   },
-  "description": "Tooltip designed for Angular and Ionic/Angular applications.",
+  "description": "Tooltip directive designed for Angular and Ionic/Angular applications.",
   "license": "MIT",
   "keywords": [
     "tooltip",
@@ -19,7 +19,7 @@
     "tooltip-directive",
     "ng-tooltip",
     "@ng-tooltip",
-    "duyvu-fsdev"
+    "@duyvu-fsdev"
   ],
   "peerDependencies": {
     "@angular/common": "^18.2.0",

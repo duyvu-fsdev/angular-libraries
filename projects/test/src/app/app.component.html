@@ -1,50 +1,28 @@
-<style>
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    gap: 50px;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: orange;
-    text-transform: capitalize;
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-  }
-</style>
-<!--  -->
 <main class="main">
-  <ng-tooltip [option]="tooltipOptiontop"> <button>top</button> </ng-tooltip>
-  <div class="content">
-    <ng-tooltip [option]="tooltipOptionleft">
-      <button>left</button>
-    </ng-tooltip>
-    <ng-tooltip [option]="tooltipOption">
-      <button>default</button>
-    </ng-tooltip>
-    <ng-tooltip [option]="tooltipOptionright">
-      <button>right</button>
-    </ng-tooltip>
+  <div class="container">
+    <button tooltip [tooltipOption]="tooltipOptiontop">top</button>
+    <div class="mid">
+      <button tooltip [tooltipOption]="tooltipOptionleft">left</button>
+      <button
+        tooltip
+        [tooltipOption]="{ text: 'Custom style via variables', class: 'custom-variables' }"
+      >
+        Custom style via variables
+      </button>
+      <span tooltip [tooltipOption]="{ position: 'bottom', text: 'This is span tag' }">
+        default
+      </span>
+      <button tooltip [tooltipOption]="{ text: 'Custom style via class', class: 'custom-css' }">
+        Custom style via class
+      </button>
+      <button tooltip [tooltipOption]="tooltipOptionright">right</button>
+    </div>
+    <button tooltip [tooltipOption]="tooltipOptionbottom">bottom</button>
   </div>
-  <ng-tooltip [option]="tooltipOptionbottom">
-    <button>bottom</button>
-  </ng-tooltip>
+  <my-component tooltip [tooltipOption]="{ text: 'This is my-component',  }"></my-component>
+
+  <other-component></other-component>
+  <h3>Resize the browser window to see the tooltip's position auto-adjust</h3>
 </main>
 
 <router-outlet />
